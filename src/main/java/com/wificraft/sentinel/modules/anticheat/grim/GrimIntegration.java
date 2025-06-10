@@ -14,14 +14,14 @@ import java.util.Map;
 import org.bukkit.plugin.Plugin;
 
 import com.wificraft.sentinel.modules.anticheat.AntiCheatIntegration;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 
 public class GrimIntegration implements Listener {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final AntiCheatIntegration antiCheat;
     private final Map<String, Integer> violationLevels;
 
-    public GrimIntegration(WiFiCraftSentinel plugin) {
+    public GrimIntegration(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.antiCheat = plugin.getAntiCheatIntegration();
         this.violationLevels = new java.util.HashMap<>();

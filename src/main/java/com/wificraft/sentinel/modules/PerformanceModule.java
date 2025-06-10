@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
@@ -13,11 +13,11 @@ import com.sun.management.OperatingSystemMXBean;
 import org.bukkit.Chunk;
 
 public class PerformanceModule {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private BukkitTask monitoringTask;
     private long lastOptimizationTime;
 
-    public PerformanceModule(WiFiCraftSentinel plugin) {
+    public PerformanceModule(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.lastOptimizationTime = System.currentTimeMillis();
     }
@@ -72,9 +72,9 @@ public class PerformanceModule {
 
     private class PerformanceMonitor extends BukkitRunnable {
         private long lastOptimizationTime = 0;
-        private final WiFiCraftSentinel plugin;
+        private final SentinelPlugin plugin;
 
-        public PerformanceMonitor(WiFiCraftSentinel plugin) {
+        public PerformanceMonitor(SentinelPlugin plugin) {
             this.plugin = plugin;
         }
 

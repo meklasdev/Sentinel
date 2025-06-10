@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import org.bukkit.configuration.file.YamlConfiguration;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.gui.ClientInspectorGUI;
 import com.wificraft.sentinel.modules.config.InspectionConfig;
 import com.wificraft.sentinel.modules.data.ActivityAnalyzer;

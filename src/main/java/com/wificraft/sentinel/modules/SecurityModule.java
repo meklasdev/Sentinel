@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,10 +18,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SecurityModule implements Listener {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final Map<String, String> clientWhitelist;
 
-    public SecurityModule(WiFiCraftSentinel plugin) {
+    public SecurityModule(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.clientWhitelist = new HashMap<>();
     }

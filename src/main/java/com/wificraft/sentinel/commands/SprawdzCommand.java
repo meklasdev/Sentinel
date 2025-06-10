@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.commands;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
@@ -21,9 +21,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SprawdzCommand implements CommandExecutor, TabCompleter {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
 
-    public SprawdzCommand(WiFiCraftSentinel plugin) {
+    public SprawdzCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
     }
 

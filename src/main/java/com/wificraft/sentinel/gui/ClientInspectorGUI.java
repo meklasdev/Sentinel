@@ -10,7 +10,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.ClientSecurity;
 import com.wificraft.sentinel.modules.security.HardwareFingerprint;
 
@@ -19,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class ClientInspectorGUI implements Listener {
     private static final Map<UUID, Inspection> activeInspections = new HashMap<>();
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final ClientSecurity clientSecurity;
     
     /**
@@ -30,7 +30,7 @@ public class ClientInspectorGUI implements Listener {
         return new HashMap<>(activeInspections);
     }
 
-    public ClientInspectorGUI(WiFiCraftSentinel plugin) {
+    public ClientInspectorGUI(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.clientSecurity = plugin.getSecurityModule().getClientSecurity();
         Bukkit.getPluginManager().registerEvents(this, plugin);

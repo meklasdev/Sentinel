@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules.security;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.alerts.AlertManager;
 import com.wificraft.sentinel.alerts.SeverityLevel;
 import com.wificraft.sentinel.config.SecurityConfig;
@@ -30,7 +30,7 @@ public class BehaviorAnalyzer implements Listener, IAnalyzer {
     private final int blockBreakThreshold;
     private final int blockPlaceThreshold;
 
-    public BehaviorAnalyzer(WiFiCraftSentinel plugin) {
+    public BehaviorAnalyzer(SentinelPlugin plugin) {
         this.alertManager = new AlertManager();
         this.playerEvents = new HashMap<>();
         FileConfiguration config = plugin.getConfig();

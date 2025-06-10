@@ -1,4 +1,4 @@
-# WiFiCraft Sentinel Configuration Guide
+# Sentinel Configuration Guide
 
 ## Konfiguracja Modułu Discord
 
@@ -269,6 +269,7 @@ For advanced users:
 3. Modify alert templates
 4. Configure custom thresholds
 5. Implement custom logging
+6. Java Assist Remover requires no configuration
 
 ## Security Recommendations
 

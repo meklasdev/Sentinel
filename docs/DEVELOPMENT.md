@@ -1,4 +1,4 @@
-# WiFiCraft Sentinel Development Guide
+# Sentinel Development Guide
 
 ## Setup Instructions
 
@@ -151,6 +151,7 @@ cd sentinel
 - Design patterns
 - Performance metrics
 - Security considerations
+- Java Assist Remover module
 
 ## Troubleshooting
 

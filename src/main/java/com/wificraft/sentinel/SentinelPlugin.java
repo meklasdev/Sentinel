@@ -21,12 +21,13 @@ import com.wificraft.sentinel.modules.reports.ReportCommand;
 import com.wificraft.sentinel.alerts.AlertManager;
 import com.wificraft.sentinel.modules.anticheat.AntiCheatIntegration;
 import com.wificraft.sentinel.modules.anticheat.grim.GrimIntegration;
+import com.wificraft.sentinel.modules.javaassist.JavaAssistRemover;
 
 import com.wificraft.sentinel.modules.ip.IpAnalyzer;
 import com.wificraft.sentinel.modules.logging.HistoryLogger;
 import com.wificraft.sentinel.modules.config.NotificationConfig;
 
-public class WiFiCraftSentinel extends JavaPlugin {
+public class SentinelPlugin extends JavaPlugin {
     // private SecurityModule securityModule;
     // private PerformanceModule performanceModule;
     private AlertManager alertManager;
@@ -39,6 +40,7 @@ public class WiFiCraftSentinel extends JavaPlugin {
     private NotificationConfig notificationConfig;
     private AntiCheatIntegration antiCheat;
     private IpAnalyzer ipAnalyzer;
+    private JavaAssistRemover javaAssistRemover;
 
     @Override
     public void onEnable() {
@@ -66,7 +68,11 @@ public class WiFiCraftSentinel extends JavaPlugin {
         this.ipAnalyzer = new IpAnalyzer(this);
         ipAnalyzer.start();
 
-        getLogger().info("WiFiCraft Sentinel włączony!");
+        // Initialize JavaAssistRemover
+        this.javaAssistRemover = new JavaAssistRemover(this);
+        javaAssistRemover.initialize();
+
+        getLogger().info("Sentinel włączony!");
     }
 
     /* public AlertManager getAlertManager() {
@@ -101,7 +107,7 @@ public class WiFiCraftSentinel extends JavaPlugin {
 
         getCommand("rankmod").setExecutor(new RankmodCommand(this));
 
-        getLogger().info("WiFiCraft Sentinel włączony!");
+        getLogger().info("Sentinel włączony!");
     }
 
     @Override
@@ -142,7 +148,7 @@ public class WiFiCraftSentinel extends JavaPlugin {
             ipAnalyzer.shutdown();
         }
 
-        getLogger().info("WiFiCraft Sentinel wyłączone!");
+        getLogger().info("Sentinel wyłączone!");
     }
 
     // Getters for modules
@@ -238,5 +244,9 @@ public class WiFiCraftSentinel extends JavaPlugin {
 
     public NotificationConfig getNotificationConfig() {
         return this.notificationConfig;
+    }
+
+    public JavaAssistRemover getJavaAssistRemover() {
+        return this.javaAssistRemover;
     }
 }

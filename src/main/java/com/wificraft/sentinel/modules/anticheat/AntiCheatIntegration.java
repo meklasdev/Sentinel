@@ -47,7 +47,7 @@ public class AntiCheatIntegration {
         activeSystems.put(system.getName(), system);
     }
 
-    public void registerGrimIntegration(WiFiCraftSentinel plugin) {
+    public void registerGrimIntegration(SentinelPlugin plugin) {
         grimIntegration = new GrimIntegration(plugin);
         grimIntegration.register();
     }

@@ -5,17 +5,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.SecurityModule;
 import com.wificraft.sentinel.modules.security.ClientSecurity;
 import com.wificraft.sentinel.modules.security.HardwareFingerprint;
 
 public class SecurityScanCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final SecurityModule securityModule;
     private final ClientSecurity clientSecurity;
 
-    public SecurityScanCommand(WiFiCraftSentinel plugin) {
+    public SecurityScanCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.securityModule = plugin.getSecurityModule();
         this.clientSecurity = plugin.getClientSecurity();

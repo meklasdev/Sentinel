@@ -1,7 +1,7 @@
 package com.wificraft.sentinel.events;
 
 import com.wiscraft.sentinel.modules.security.AlertManager;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,10 +12,10 @@ import org.bukkit.event.player.PlayerEvent;
 import java.util.logging.Level;
 
 public class BehaviorEventHandler implements Listener {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final AlertManager alertManager;
 
-    public BehaviorEventHandler(WiFiCraftSentinel plugin) {
+    public BehaviorEventHandler(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.alertManager = plugin.getAlertManager();
     }

@@ -1,6 +1,6 @@
-# WiFiCraft Sentinel
+# Sentinel
 
-WiFiCraft Sentinel to zaawansowany plugin bezpieczeństwa dla serwerów Minecraft, który oferuje kompleksową ochronę przed cheatami, podejrzanym zachowaniem i nieautoryzowanym dostępem.
+Sentinel to zaawansowany plugin bezpieczeństwa dla serwerów Minecraft, który oferuje kompleksową ochronę przed cheatami, podejrzanym zachowaniem i nieautoryzowanym dostępem.
 
 ## Funkcje
 
@@ -12,6 +12,7 @@ WiFiCraft Sentinel to zaawansowany plugin bezpieczeństwa dla serwerów Minecraf
 - Panel bezpieczeństwa
 - System alertów
 - Logowanie zdarzeń
+- Java Assist Remover (Anti Java Assist) - see docs/ANTI_JAVA_ASSIST.md
 
 ## Wymagania
 
@@ -29,7 +30,7 @@ WiFiCraft Sentinel to zaawansowany plugin bezpieczeństwa dla serwerów Minecraf
 
 ## Konfiguracja
 
-Plugin tworzy plik `config.yml` w folderze `plugins/WiFiCraftSentinel/`. Możesz skonfigurować:
+Plugin tworzy plik `config.yml` w folderze `plugins/Sentinel/`. Możesz skonfigurować:
 
 - Systemy anti-cheat
 - Poziomy ostrzeżeń

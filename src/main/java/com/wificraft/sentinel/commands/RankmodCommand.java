@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.commands;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.ModeratorRanking;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -10,9 +10,9 @@ import org.bukkit.entity.Player;
 import java.util.UUID;
 
 public class RankmodCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
 
-    public RankmodCommand(WiFiCraftSentinel plugin) {
+    public RankmodCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
     }
 

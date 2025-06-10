@@ -5,17 +5,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.CloudProviderDetector;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.CloudProviderDetector;
 
 public class CloudCheckCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final CloudProviderDetector cloudDetector;
 
-    public CloudCheckCommand(WiFiCraftSentinel plugin) {
+    public CloudCheckCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.cloudDetector = new CloudProviderDetector(60); // Cache duration 60 minutes
     }
