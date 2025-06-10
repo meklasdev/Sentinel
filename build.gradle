@@ -1,0 +1,134 @@
+plugins {
+    id 'java'
+    id("xyz.jpenilla.run-paper") version "2.3.1"
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+group = 'meklas.gordis'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+    maven {
+        name = "sonatype"
+        url = "https://oss.sonatype.org/content/groups/public/"
+    }
+    maven {
+        name = "grimacSnapshots"
+        url = uri("https://repo.grim.ac/snapshots")
+        content {
+            includeGroup "ac.grim.grimac"
+        }
+    }
+    maven {
+        name = "grimacReleases"
+        url = uri("https://repo.grim.ac/releases")
+        content {
+            includeGroup "ac.grim.grimac"
+        }
+    }
+}
+
+dependencies {
+    // Paper API
+    compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
+    
+    // Modern text components
+    implementation("net.kyori:adventure-api:4.17.0")
+    implementation("net.kyori:adventure-platform-bukkit:4.3.2")
+    implementation("net.kyori:adventure-text-minimessage:4.17.0")
+    
+    // HTTP and JSON
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'org.json:json:20240303'  // For JSON processing
+    
+    // JDA for Discord integration (if still needed)
+    implementation 'net.dv8tion:JDA:5.0.0-beta.20'  // Update to latest version if needed
+    
+    // Other utility libraries
+    implementation 'com.google.guava:guava:33.0.0-jre'  // For additional utilities
+    implementation 'org.json:json:20240303'
+    
+    // Discord integration (keeping for now in case other parts use it)
+    compileOnly("net.dv8tion:JDA:5.0.0-beta.14")
+    
+    // Anti-cheat integrations
+    // Temporarily commented out as the repository is not accessible
+    // compileOnly 'ac.grim.grimac:grim-api:2.3.15-SNAPSHOT'
+    
+    // IP analysis
+    implementation("org.apache.httpcomponents:httpclient:4.5.14")
+    implementation("com.google.code.gson:gson:2.10.1")
+    
+    // Testing
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+    testImplementation("org.mockito:mockito-core:5.5.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.5.0")
+}
+
+tasks {
+    runServer {
+        minecraftVersion("1.21")
+    }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs += [
+        '--enable-preview'
+    ]
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('paper-plugin.yml') {
+        expand props
+    }
+    from('src/main/resources/test-config.yml') {
+        into 'config'
+        rename 'test-config.yml', 'config.yml'
+    }
+}
+
+jar.enabled = false
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'com.wificraft.sentinel.WiFiCraftSentinel',
+            'Implementation-Version': version
+        )
+    }
+
+}
+
+build {
+    dependsOn shadowJar
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    archiveBaseName.set('Sentinel')
+    archiveVersion.set(version)
+    manifest {
+        attributes(
+            'Main-Class': 'com.wificraft.sentinel.WiFiCraftSentinel'
+        )
+    }
+    doLast {
+        println "Shadow JAR created at: ${archiveFile.get().asFile.path}"
+    }
+}

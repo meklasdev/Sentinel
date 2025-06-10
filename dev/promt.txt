@@ -1,0 +1,2000 @@
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
+
+...
+#############################################
+# MODUŁ: ClientInspectorGUI
+# OPIS ROZSZERZONY
+#############################################
+
+[SEKCJA: OPIS FUNKCJONALNY]
+Nazwa modułu: ClientInspectorGUI
+Typ: GUI Moderacyjne
+Główna funkcja: Pozwala na wizualne inspektowanie dowolnego gracza w czasie rzeczywistym z poziomu GUI.
+Dostęp: Komenda /sprawdz lub /sprawdz <nick>
+
+[SEKCJA: PRZYKŁADOWE INTERAKCJE Z GUI]
+Moderator otwiera GUI komendą: /sprawdz Player123
+Zobaczy:
+- Główkę gracza
+- Nick: Player123
+- Status: Online
+- Data ostatniego logowania: 2025-06-08
+- Powiązane konto Discord: TAK (ID: 107293847298347928)
+- Liczba poprzednich inspekcji: 4
+- Liczba banów: 1
+- Historia:
+  - Ban 2025-05-01 przez AdminPro za "KillAura"
+  - Inspekcja 2025-04-20 przez Jelonek, wynik: czysty
