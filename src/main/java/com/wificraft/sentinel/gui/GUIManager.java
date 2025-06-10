@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.gui;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -21,9 +21,9 @@ public class GUIManager implements Listener {
     private static final int GUI_SIZE = 54;
     private final Map<UUID, GUIState> openGuis = new ConcurrentHashMap<>();
     private final Map<String, GUIConfig> guiConfigs = new HashMap<>();
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
 
-    public GUIManager(WiFiCraftSentinel plugin) {
+    public GUIManager(SentinelPlugin plugin) {
         this.plugin = plugin;
         Bukkit.getPluginManager().registerEvents(this, plugin);
         
@@ -211,7 +211,7 @@ public class GUIManager implements Listener {
      * @param config The GUIConfig containing the items to place in the inventory
      * @param plugin The plugin instance for logging
      */
-    public static void fillInventory(Inventory inventory, GUIConfig config, WiFiCraftSentinel plugin) {
+    public static void fillInventory(Inventory inventory, GUIConfig config, SentinelPlugin plugin) {
             try {
             // Create a filler item (gray stained glass pane)
             ItemStack filler = new ItemStack(Material.GRAY_STAINED_GLASS_PANE);

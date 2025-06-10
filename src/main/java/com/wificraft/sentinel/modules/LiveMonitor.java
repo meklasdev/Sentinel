@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -19,11 +19,11 @@ import java.util.List;
 import java.util.Set;
 
 public class LiveMonitor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private BukkitTask refreshTask;
     private final List<Player> viewingPlayers;
 
-    public LiveMonitor(WiFiCraftSentinel plugin) {
+    public LiveMonitor(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.viewingPlayers = new ArrayList<>();
     }

@@ -32,7 +32,7 @@ public class SuspiciousActivityDetector {
             public void run() {
                 checkForSuspiciousActivity();
             }
-        }.runTaskTimer(Bukkit.getPluginManager().getPlugin("WiFiCraftSentinel"), 20 * 60, 20 * 60);
+        }.runTaskTimer(Bukkit.getPluginManager().getPlugin("SentinelPlugin"), 20 * 60, 20 * 60);
     }
     
     public void onPlayerLogin(Player player) {

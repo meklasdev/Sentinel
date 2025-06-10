@@ -5,17 +5,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.DataCenterDetector;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.DataCenterDetector;
 
 public class DataCenterCheckCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final DataCenterDetector dcDetector;
 
-    public DataCenterCheckCommand(WiFiCraftSentinel plugin) {
+    public DataCenterCheckCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.dcDetector = new DataCenterDetector(60); // Cache duration 60 minutes
     }

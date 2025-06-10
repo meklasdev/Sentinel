@@ -2,7 +2,7 @@ package com.wificraft.sentinel.modules.security;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.configuration.file.FileConfiguration;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import java.util.logging.Level;
 import com.wificraft.sentinel.alerts.AlertManager;
 import com.wificraft.sentinel.logging.SecurityLogger;
@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class SecurityModule {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private SecurityLogger logger;
     private final Set<String> whitelist;
     private final ClientSecurity clientSecurity;
@@ -22,7 +22,7 @@ public class SecurityModule {
     private final Map<UUID, Long> lastSecurityScan;
     private final FileConfiguration config;
 
-    public SecurityModule(WiFiCraftSentinel plugin) {
+    public SecurityModule(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.whitelist = new HashSet<>();
         this.lastSecurityScan = new HashMap<>();

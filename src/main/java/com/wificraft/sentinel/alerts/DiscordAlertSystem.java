@@ -1,7 +1,7 @@
 package com.wificraft.sentinel.alerts;
 
 import com.wiscraft.sentinel.modules.security.AlertManager.SeverityLevel;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.config.SecurityConfig;
 import okhttp3.*;
 import org.json.JSONObject;
@@ -18,12 +18,12 @@ import net.dv8tion.jda.api.requests.restaction.WebhookMessageAction;
 
 
 public class DiscordAlertSystem {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final SecurityConfig config;
     private final OkHttpClient httpClient;
     private String webhookUrl;
 
-    public DiscordAlertSystem(WiFiCraftSentinel plugin) {
+    public DiscordAlertSystem(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.config = new SecurityConfig(plugin.getConfig());
         this.httpClient = new OkHttpClient.Builder()

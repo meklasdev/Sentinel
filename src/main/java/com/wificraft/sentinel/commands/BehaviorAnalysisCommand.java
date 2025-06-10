@@ -6,14 +6,14 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.behavior.BehaviorLearningSystem;
 
 public class BehaviorAnalysisCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final BehaviorLearningSystem learningSystem;
 
-    public BehaviorAnalysisCommand(WiFiCraftSentinel plugin) {
+    public BehaviorAnalysisCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.learningSystem = new BehaviorLearningSystem(30, 1.5); // 30 minutes learning period, 1.5 confidence threshold
     }

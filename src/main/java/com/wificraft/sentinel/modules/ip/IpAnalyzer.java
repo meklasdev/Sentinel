@@ -9,13 +9,13 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.config.SecurityConfig;
 // import com.wificraft.sentinel.modules.security.AlertManager;
 // import com.wificraft.sentinel.modules.alerts.AlertSeverity;
 
 public class IpAnalyzer implements Runnable {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     // private final AlertManager alertManager;
     // private final SecurityConfig config;
     private final Map<UUID, IpAnalysis> playerAnalyses;
@@ -25,7 +25,7 @@ public class IpAnalyzer implements Runnable {
     private final Map<String, Integer> suspiciousTimezones;
     private final Map<String, Integer> suspiciousRanges;
 
-    public IpAnalyzer(WiFiCraftSentinel plugin) {
+    public IpAnalyzer(SentinelPlugin plugin) {
         this.plugin = plugin;
         // this.alertManager = plugin.getAlertManager();
         // this.config = plugin.getSecurityConfig();

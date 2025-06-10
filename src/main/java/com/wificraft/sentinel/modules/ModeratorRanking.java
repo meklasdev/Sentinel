@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -28,7 +28,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class ModeratorRanking {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final Map<UUID, ModeratorStats> moderatorStats;
     private final Map<YearMonth, Map<UUID, MonthlyStats>> monthlyStats;
     private static final DateTimeFormatter MONTH_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
@@ -42,7 +42,7 @@ public class ModeratorRanking {
         return moderatorStats.size();
     }
 
-    public ModeratorRanking(WiFiCraftSentinel plugin) {
+    public ModeratorRanking(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.moderatorStats = new HashMap<>();
         this.monthlyStats = new HashMap<>();

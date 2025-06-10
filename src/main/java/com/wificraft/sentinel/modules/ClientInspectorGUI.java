@@ -25,7 +25,7 @@ import com.wificraft.sentinel.modules.data.SuspiciousActivityDetector;
 import com.wificraft.sentinel.modules.data.NotesManager;
 import com.wificraft.sentinel.modules.config.InspectionConfig;
 import com.wificraft.sentinel.modules.discord.DiscordIntegration;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.ChatColor;
 
 public class ClientInspectorGUI {
