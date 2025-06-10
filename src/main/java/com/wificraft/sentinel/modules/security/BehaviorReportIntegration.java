@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules.security;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.alerts.AlertManager;
 import com.wificraft.sentinel.alerts.SeverityLevel;
 import org.bukkit.Bukkit;
@@ -10,9 +10,9 @@ import java.util.*;
 public class BehaviorReportIntegration {
     private final AlertManager alertManager;
     private final BehaviorAnalyzer behaviorAnalyzer;
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     
-    public BehaviorReportIntegration(WiFiCraftSentinel plugin, BehaviorAnalyzer behaviorAnalyzer) {
+    public BehaviorReportIntegration(SentinelPlugin plugin, BehaviorAnalyzer behaviorAnalyzer) {
         this.plugin = plugin;
         this.alertManager = new AlertManager();
         this.behaviorAnalyzer = behaviorAnalyzer;

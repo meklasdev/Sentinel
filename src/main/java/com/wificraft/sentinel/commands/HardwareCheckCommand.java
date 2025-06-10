@@ -6,15 +6,15 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.HardwareFingerprinter;
 import com.wificraft.sentinel.modules.security.HardwareFingerprint;
 
 public class HardwareCheckCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final HardwareFingerprinter fingerprinter;
 
-    public HardwareCheckCommand(WiFiCraftSentinel plugin) {
+    public HardwareCheckCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.fingerprinter = new HardwareFingerprinter(30, 60); // 30s scan interval, 60min cache
     }

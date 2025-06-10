@@ -8,15 +8,15 @@ import org.bukkit.entity.Player;
 import com.wificraft.sentinel.modules.ip.IpAnalysis;
 import java.util.concurrent.TimeUnit;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.ip.IpAnalyzer;
 import com.wificraft.sentinel.modules.ip.IpAnalysis;
 
 public class IpAnalysisCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final IpAnalyzer ipAnalyzer;
 
-    public IpAnalysisCommand(WiFiCraftSentinel plugin) {
+    public IpAnalysisCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.ipAnalyzer = plugin.getIpAnalyzer();
     }

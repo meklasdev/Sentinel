@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules.reports;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.reports.evidence.ChatEvidence;
 import com.wificraft.sentinel.modules.reports.evidence.LocationEvidence;
 import com.wificraft.sentinel.modules.reports.evidence.ScreenshotEvidence;

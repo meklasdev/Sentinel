@@ -5,17 +5,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.gui.GUIManager;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.gui.GUIManager;
 
 public class OpenGUICmd implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final GUIManager guiManager;
 
-    public OpenGUICmd(WiFiCraftSentinel plugin) {
+    public OpenGUICmd(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.guiManager = new GUIManager(plugin);
     }

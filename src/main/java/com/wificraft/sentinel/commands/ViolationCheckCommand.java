@@ -6,14 +6,14 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.anticheat.AntiCheatIntegration;
 
 public class ViolationCheckCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final AntiCheatIntegration antiCheat;
 
-    public ViolationCheckCommand(WiFiCraftSentinel plugin) {
+    public ViolationCheckCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.antiCheat = plugin.getAntiCheatIntegration();
     }

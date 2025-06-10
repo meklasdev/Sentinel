@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.commands;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.InspectionModule;
 import com.wificraft.sentinel.modules.LiveMonitor;
 import com.wificraft.sentinel.modules.ModeratorRanking;
@@ -19,7 +19,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class SentinelCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final PerformanceModule performanceModule;
     private final InspectionModule inspectionModule;
     private final LiveMonitor liveMonitor;
@@ -27,7 +27,7 @@ public class SentinelCommand implements CommandExecutor {
     private final HistoryLogger historyLogger;
     private final NotificationConfig notificationConfig;
 
-    public SentinelCommand(WiFiCraftSentinel plugin) {
+    public SentinelCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.performanceModule = plugin.getPerformanceModule();
         this.inspectionModule = plugin.getInspectionModule();

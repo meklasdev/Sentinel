@@ -6,17 +6,17 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import com.wificraft.sentinel.modules.security.GeolocationService;
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.GeolocationService;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.modules.security.GeolocationService;
 
 public class LocationCheckCommand implements CommandExecutor {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final GeolocationService geolocationService;
 
-    public LocationCheckCommand(WiFiCraftSentinel plugin) {
+    public LocationCheckCommand(SentinelPlugin plugin) {
         this.plugin = plugin;
         this.geolocationService = new GeolocationService(60); // Cache duration 60 minutes
     }

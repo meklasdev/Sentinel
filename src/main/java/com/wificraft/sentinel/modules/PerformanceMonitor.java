@@ -1,15 +1,15 @@
 package com.wificraft.sentinel.modules;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import com.wificraft.sentinel.alerts.Alert;
 import com.wificraft.sentinel.alerts.SeverityLevel;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class PerformanceMonitor extends BukkitRunnable {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
 
-    public PerformanceMonitor(WiFiCraftSentinel plugin) {
+    public PerformanceMonitor(SentinelPlugin plugin) {
         this.plugin = plugin;
     }
 

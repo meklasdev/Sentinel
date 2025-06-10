@@ -1,6 +1,6 @@
 package com.wificraft.sentinel.modules;
 
-import com.wificraft.sentinel.WiFiCraftSentinel;
+import com.wificraft.sentinel.SentinelPlugin;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -37,7 +37,7 @@ import net.kyori.adventure.text.format.TextColor;
 import java.util.concurrent.TimeUnit;
 
 public class InspectionModule implements Listener {
-    private final WiFiCraftSentinel plugin;
+    private final SentinelPlugin plugin;
     private final ModeratorRanking moderatorRanking;
     private final Map<UUID, List<InspectionReport>> reports = new HashMap<>();
     private final Map<UUID, List<Evidence>> evidenceMap = new HashMap<>();
@@ -46,7 +46,7 @@ public class InspectionModule implements Listener {
     private final Map<UUID, PlayerStats> playerStats = new HashMap<>();
     private Map<UUID, ModeratorStats> moderatorStats = new HashMap<>();
 
-    public InspectionModule(WiFiCraftSentinel plugin, ModeratorRanking moderatorRanking) {
+    public InspectionModule(SentinelPlugin plugin, ModeratorRanking moderatorRanking) {
         this.plugin = plugin;
         this.moderatorRanking = moderatorRanking;
         this.reportsFolder = new File(plugin.getDataFolder(), "reports");
