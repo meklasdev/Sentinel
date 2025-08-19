@@ -1,0 +1,804 @@
+package com.wificraft.sentinel.modules;
+
+import com.wificraft.sentinel.WiFiCraftSentinel;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
+
+import java.io.*;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class ModeratorRanking {
+    private final WiFiCraftSentinel plugin;
+    private final Map<UUID, ModeratorStats> moderatorStats;
+    private final Map<YearMonth, Map<UUID, MonthlyStats>> monthlyStats;
+    private static final DateTimeFormatter MONTH_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM");
+    private static final String REWARDS_PERMISSION = "sentinel.ranking.rewards";
+
+    public Map<UUID, ModeratorStats> getModeratorStats() {
+        return moderatorStats;
+    }
+    
+    public int getRankedModeratorCount() {
+        return moderatorStats.size();
+    }
+
+    public ModeratorRanking(WiFiCraftSentinel plugin) {
+        this.plugin = plugin;
+        this.moderatorStats = new HashMap<>();
+        this.monthlyStats = new HashMap<>();
+        
+        // Load data
+        loadModeratorStats();
+        loadMonthlyStats();
+        
+        // Load data on initialization
+        loadModeratorStats();
+        loadMonthlyStats();
+        
+        // Schedule tasks
+        scheduleMonthlyReset();
+        if (plugin.getConfig().getBoolean("ranking.rewards.enabled", true)) {
+            scheduleRewardDistribution();
+        }
+    }
+
+    public void initialize() {
+        // Initialization is now handled in the constructor
+    }
+    
+    /**
+     * Load moderator stats from disk
+     */
+    private void loadMonthlyStats() {
+        try {
+            File dataFolder = new File(plugin.getDataFolder(), "data");
+            if (!dataFolder.exists()) {
+                dataFolder.mkdirs();
+                return;
+            }
+            
+            File monthlyFile = new File(dataFolder, "monthly_stats.yml");
+            if (!monthlyFile.exists()) {
+                return;
+            }
+            
+            YamlConfiguration config = YamlConfiguration.loadConfiguration(monthlyFile);
+            ConfigurationSection monthsSection = config.getConfigurationSection("months");
+            if (monthsSection != null) {
+                for (String monthKey : monthsSection.getKeys(false)) {
+                    YearMonth month = YearMonth.parse(monthKey, MONTH_FORMAT);
+                    ConfigurationSection monthSection = monthsSection.getConfigurationSection(monthKey);
+                    
+                    Map<UUID, MonthlyStats> monthStats = new HashMap<>();
+                    for (String moderatorId : monthSection.getKeys(false)) {
+                        try {
+                            ConfigurationSection modSection = monthSection.getConfigurationSection(moderatorId);
+                            if (modSection != null) {
+                                MonthlyStats stats = new MonthlyStats(
+                                    UUID.fromString(moderatorId),
+                                    month
+                                );
+                                stats.setReports(modSection.getInt("reports", 0));
+                                stats.setPoints(modSection.getInt("points", 0));
+                                monthStats.put(stats.getModeratorId(), stats);
+                            }
+                        } catch (IllegalArgumentException e) {
+                            plugin.getLogger().warning("Invalid UUID in monthly stats: " + moderatorId);
+                        }
+                    }
+                    monthlyStats.put(month, monthStats);
+                }
+            }
+        } catch (Exception e) {
+            plugin.getLogger().severe("Failed to load monthly stats: " + e.getMessage());
+        }
+    }
+    
+    /**
+     * Load moderator stats from disk
+     */
+    private void loadModeratorStats() {
+        try {
+            File dataFolder = new File(plugin.getDataFolder(), "data");
+            if (!dataFolder.exists()) {
+                dataFolder.mkdirs();
+                return;
+            }
+            
+            File statsFile = new File(dataFolder, "moderator_stats.yml");
+            if (!statsFile.exists()) {
+                return;
+            }
+            
+            YamlConfiguration config = YamlConfiguration.loadConfiguration(statsFile);
+            
+            // Load moderator stats
+            ConfigurationSection moderatorsSection = config.getConfigurationSection("moderators");
+            if (moderatorsSection != null) {
+                for (String moderatorId : moderatorsSection.getKeys(false)) {
+                    try {
+                        ConfigurationSection modSection = moderatorsSection.getConfigurationSection(moderatorId);
+                        if (modSection != null) {
+                            String name = modSection.getString("name", "Unknown");
+                            int totalReports = modSection.getInt("totalReports", 0);
+                            int acceptedReports = modSection.getInt("acceptedReports", 0);
+                            int rejectedReports = modSection.getInt("rejectedReports", 0);
+                            int totalPoints = modSection.getInt("totalPoints", 0);
+                            int currentStreak = modSection.getInt("currentStreak", 0);
+                            int highestStreak = modSection.getInt("highestStreak", 0);
+                            LocalDate lastActivity = LocalDate.parse(modSection.getString("lastActivity", LocalDate.now().toString()));
+                            
+                            ModeratorStats stats = new ModeratorStats(name);
+                            stats.setTotalReports(totalReports);
+                            stats.setAcceptedReports(acceptedReports);
+                            stats.setRejectedReports(rejectedReports);
+                            stats.setTotalPoints(totalPoints);
+                            stats.setCurrentStreak(currentStreak);
+                            stats.setHighestStreak(highestStreak);
+                            stats.setLastActivity(lastActivity);
+                            
+                            moderatorStats.put(UUID.fromString(moderatorId), stats);
+                        }
+                    } catch (IllegalArgumentException e) {
+                        plugin.getLogger().warning("Invalid UUID in moderator stats: " + moderatorId);
+                    }
+                }
+            }
+            
+            // Load monthly stats
+            ConfigurationSection monthlySection = config.getConfigurationSection("monthly");
+            if (monthlySection != null) {
+                for (String monthKey : monthlySection.getKeys(false)) {
+                    try {
+                        YearMonth yearMonth = YearMonth.parse(monthKey, MONTH_FORMAT);
+                        ConfigurationSection monthSection = monthlySection.getConfigurationSection(monthKey);
+                        if (monthSection != null) {
+                            Map<UUID, MonthlyStats> monthStats = new HashMap<>();
+                            
+                            for (String moderatorId : monthSection.getKeys(false)) {
+                                try {
+                                    UUID uuid = UUID.fromString(moderatorId);
+                                    ConfigurationSection modSection = monthSection.getConfigurationSection(moderatorId);
+                                    if (modSection != null) {
+                                        MonthlyStats stats = new MonthlyStats(
+                                            modSection.getInt("reports", 0),
+                                            modSection.getInt("points", 0)
+                                        );
+                                        monthStats.put(uuid, stats);
+                                    }
+                                } catch (IllegalArgumentException e) {
+                                    plugin.getLogger().warning("Invalid UUID in monthly stats: " + moderatorId);
+                                }
+                            }
+                            
+                            monthlyStats.put(yearMonth, monthStats);
+                        }
+                    } catch (Exception e) {
+                        plugin.getLogger().warning("Invalid month format in stats: " + monthKey);
+                    }
+                }
+            }
+            
+        } catch (Exception e) {
+            plugin.getLogger().severe("Failed to load moderator stats: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    /**
+     * Saves all moderator stats to disk
+     */
+    private void saveModeratorStats() {
+        try {
+            File dataFolder = new File(plugin.getDataFolder(), "data");
+            if (!dataFolder.exists()) {
+                dataFolder.mkdirs();
+            }
+            
+            File statsFile = new File(dataFolder, "moderator_stats.yml");
+            YamlConfiguration config = new YamlConfiguration();
+            
+            // Save moderator stats
+            ConfigurationSection moderatorsSection = config.createSection("moderators");
+            for (Map.Entry<UUID, ModeratorStats> entry : moderatorStats.entrySet()) {
+                ConfigurationSection modSection = moderatorsSection.createSection(entry.getKey().toString());
+                modSection.set("name", entry.getValue().getModeratorName());
+                modSection.set("totalReports", entry.getValue().getTotalReports());
+                modSection.set("acceptedReports", entry.getValue().getAcceptedReports());
+                modSection.set("rejectedReports", entry.getValue().getRejectedReports());
+                modSection.set("totalPoints", entry.getValue().getTotalPoints());
+                modSection.set("currentStreak", entry.getValue().getCurrentStreak());
+                modSection.set("highestStreak", entry.getValue().getHighestStreak());
+                modSection.set("lastActivity", entry.getValue().getLastActivity().toString());
+            }
+            
+            config.save(statsFile);
+        } catch (IOException e) {
+            plugin.getLogger().severe("Failed to save moderator stats: " + e.getMessage());
+        }
+    }
+    
+    public void saveData() {
+        saveModeratorStats();
+        saveMonthlyStats();
+    }
+    
+    private void saveMonthlyStats() {
+        try {
+            File dataFolder = new File(plugin.getDataFolder(), "data");
+            if (!dataFolder.exists()) {
+                dataFolder.mkdirs();
+            }
+            
+            File monthlyFile = new File(dataFolder, "monthly_stats.yml");
+            YamlConfiguration yaml = new YamlConfiguration();
+            
+            // Save monthly stats
+            for (Map.Entry<YearMonth, Map<UUID, MonthlyStats>> monthEntry : monthlyStats.entrySet()) {
+                String monthKey = monthEntry.getKey().format(MONTH_FORMAT);
+                ConfigurationSection monthSection = yaml.createSection("months." + monthKey);
+                
+                for (Map.Entry<UUID, MonthlyStats> entry : monthEntry.getValue().entrySet()) {
+                    ConfigurationSection modSection = monthSection.createSection(entry.getKey().toString());
+                    modSection.set("reports", entry.getValue().getReports());
+                    modSection.set("points", entry.getValue().getPoints());
+                }
+            }
+            
+            yaml.save(monthlyFile);
+        } catch (IOException e) {
+            plugin.getLogger().severe("Failed to save monthly stats: " + e.getMessage());
+        }
+    }
+
+    public void refreshCache() {
+        // Clear existing data to ensure a fresh load
+        moderatorStats.clear();
+        monthlyStats.clear();
+
+        // Reload all ranking data from files
+        loadRankingData();
+        loadMonthlyStats();
+
+        plugin.getLogger().info("Moderator ranking cache refreshed.");
+    }
+
+    public void displayRanking(CommandSender sender) {
+        if (!(sender instanceof Player)) {
+            sender.sendMessage("§cTa komenda jest dostępna tylko dla graczy!");
+            return;
+        }
+        openRankingGUI((Player) sender);
+    }
+
+    public void openRankingGUI(Player viewer) {
+        Inventory gui = Bukkit.createInventory(null, 54, "§6Ranking moderatorów");
+        
+        // Add time period selector
+        ItemStack currentMonth = createTimePeriodItem("§aBieżący miesiąc", "month", "§7Kliknij, aby zobaczyć ranking z bieżącego miesiąca");
+        ItemStack allTime = createTimePeriodItem("§eCałkowity", "all", "§7Kliknij, aby zobaczyć ranking ogólny");
+        
+        gui.setItem(45, currentMonth);
+        gui.setItem(53, allTime);
+        
+        // Show monthly ranking by default
+        showMonthlyRanking(gui, viewer, YearMonth.now());
+        
+        viewer.openInventory(gui);
+    }
+    
+    private void showMonthlyRanking(Inventory gui, Player viewer, YearMonth month) {
+        // Clear previous items
+        for (int i = 0; i < 45; i++) {
+            gui.setItem(i, null);
+        }
+        
+        // Get monthly stats
+        Map<UUID, MonthlyStats> monthlyRanking = monthlyStats.getOrDefault(month, new HashMap<>());
+        
+        // Sort by points
+        List<Map.Entry<UUID, MonthlyStats>> sorted = monthlyRanking.entrySet().stream()
+            .sorted((a, b) -> Integer.compare(b.getValue().getPoints(), a.getValue().getPoints()))
+            .collect(Collectors.toList());
+            
+        // Add ranking items
+        int slot = 0;
+        for (int i = 0; i < sorted.size() && slot < 45; i++) {
+            Map.Entry<UUID, MonthlyStats> entry = sorted.get(i);
+            MonthlyStats stats = entry.getValue();
+            OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(entry.getKey());
+            
+            if (offlinePlayer.hasPlayedBefore()) {
+                gui.setItem(slot, createMonthlyModeratorItem(offlinePlayer, stats, i + 1));
+                slot += 2;
+            }
+        }
+        
+        // Update viewer's inventory
+        if (viewer != null && viewer.getOpenInventory() != null) {
+            viewer.updateInventory();
+        }
+    }
+    
+    private ItemStack createTimePeriodItem(String name, String period, String... lore) {
+        ItemStack item = new ItemStack(Material.CLOCK);
+        ItemMeta meta = item.getItemMeta();
+        if (meta == null) return item;
+        
+        meta.setDisplayName(name);
+        meta.setLore(Arrays.asList(lore));
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    private ItemStack createModeratorItem(Player moderator, ModeratorStats stats, int rank) {
+        ItemStack item = new ItemStack(Material.PLAYER_HEAD);
+        if (item.getItemMeta() == null) {
+            return item;
+        }
+
+        SkullMeta meta = (SkullMeta) item.getItemMeta();
+        meta.setOwningPlayer(moderator);
+        meta.setDisplayName("§e" + moderator.getName() + " §7(#" + rank + ")");
+        
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Statystyki ogólne:");
+        lore.add("§eLiczba inspekcji: §f" + stats.getInspections());
+        lore.add("§eLiczba banów: §f" + stats.getBans());
+        lore.add("§eSkuteczność: §f" + String.format("%.2f%%", stats.getEffectiveness()));
+        
+        // Add monthly stats if available
+        MonthlyStats monthly = getCurrentMonthStats(moderator.getUniqueId());
+        if (monthly != null) {
+            lore.add("");
+            lore.add("§6Statystyki z bieżącego miesiąca:");
+            lore.add("§ePunkty: §f" + monthly.getPoints());
+            lore.add("§eAktywność: §f" + monthly.getActivityScore() + " pkt");
+        }
+        
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+    
+    private ItemStack createMonthlyModeratorItem(OfflinePlayer player, MonthlyStats stats, int rank) {
+        ItemStack item = new ItemStack(Material.PLAYER_HEAD);
+        if (item.getItemMeta() == null) {
+            return item;
+        }
+
+        SkullMeta meta = (SkullMeta) item.getItemMeta();
+        meta.setOwningPlayer(player);
+        meta.setDisplayName("§e" + player.getName() + " §7(#" + rank + ")");
+        
+        List<String> lore = new ArrayList<>();
+        lore.add("§7Statystyki miesięczne:");
+        lore.add("§ePunkty: §f" + stats.getPoints());
+        lore.add("§eAktywność: §f" + stats.getActivityScore() + " pkt");
+        lore.add("§eDni aktywne: §f" + stats.getActiveDays().size() + "/30");
+        
+        // Add reward info if applicable
+        if (rank <= 3) {
+            lore.add("");
+            lore.add("§6Nagroda za miejsce #" + rank + ":");
+            lore.add("§7- " + getRewardForRank(rank));
+        }
+        
+        meta.setLore(lore);
+        item.setItemMeta(meta);
+        return item;
+    }
+
+    public void updateModeratorStats(UUID moderatorId, boolean isBan) {
+        // Update overall stats
+        ModeratorStats stats = moderatorStats.computeIfAbsent(moderatorId, 
+            uuid -> new ModeratorStats(uuid));
+        
+        if (isBan) {
+            stats.incrementBans();
+        } else {
+            stats.incrementInspections();
+        }
+        
+        // Update monthly stats
+        updateMonthlyStats(moderatorId, isBan);
+        
+        saveRankingData();
+    }
+    
+    private void updateMonthlyStats(UUID moderatorId, boolean isBan) {
+        YearMonth currentMonth = YearMonth.now();
+        MonthlyStats monthly = getOrCreateMonthlyStats(moderatorId, currentMonth);
+        
+        // Update activity for today
+        LocalDate today = LocalDate.now();
+        monthly.getActiveDays().add(today);
+        
+        // Update points
+        if (isBan) {
+            monthly.incrementBans();
+        } else {
+            monthly.incrementInspections();
+        }
+        
+        // Recalculate activity score
+        monthly.calculateActivityScore();
+        
+        // Save to monthly stats
+        monthlyStats.computeIfAbsent(currentMonth, k -> new HashMap<>()).put(moderatorId, monthly);
+    }
+    
+    private MonthlyStats getOrCreateMonthlyStats(UUID moderatorId, YearMonth month) {
+        return monthlyStats.computeIfAbsent(month, k -> new HashMap<>())
+                         .computeIfAbsent(moderatorId, k -> new MonthlyStats(moderatorId));
+    }
+    
+    private MonthlyStats getCurrentMonthStats(UUID moderatorId) {
+        return monthlyStats.getOrDefault(YearMonth.now(), new HashMap<>())
+                         .get(moderatorId);
+    }
+
+    private void loadRankingData() {
+        try {
+            File rankingFile = new File(plugin.getDataFolder(), "rankmod_stats.yml");
+            if (!rankingFile.exists()) {
+                rankingFile.createNewFile();
+                return;
+            }
+
+            YamlConfiguration ranking = YamlConfiguration.loadConfiguration(rankingFile);
+            ConfigurationSection moderatorsSection = ranking.getConfigurationSection("moderators");
+            
+            if (moderatorsSection != null) {
+                for (String uuid : moderatorsSection.getKeys(false)) {
+                    try {
+                        UUID moderatorUuid = UUID.fromString(uuid);
+                        int inspections = moderatorsSection.getInt(uuid + ".inspections");
+                        int bans = moderatorsSection.getInt(uuid + ".bans");
+                        moderatorStats.put(moderatorUuid, new ModeratorStats(moderatorUuid, inspections, bans));
+                    } catch (IllegalArgumentException e) {
+                        plugin.getLogger().warning("Nieprawidłowy UUID w rankingu: " + uuid);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            plugin.getLogger().severe("Błąd podczas wczytywania rankingu: " + e.getMessage());
+        }
+    }
+    
+    private void loadMonthlyStats() {
+        File monthlyFile = new File(plugin.getDataFolder(), "monthly_stats.yml");
+        if (!monthlyFile.exists()) {
+            try {
+                monthlyFile.createNewFile();
+            } catch (IOException e) {
+                plugin.getLogger().warning("Nie udało się utworzyć pliku monthly_stats.yml: " + e.getMessage());
+            }
+            return;
+        }
+        
+        YamlConfiguration yaml = YamlConfiguration.loadConfiguration(monthlyFile);
+        for (String monthKey : yaml.getKeys(false)) {
+            try {
+                YearMonth month = YearMonth.parse(monthKey, MONTH_FORMAT);
+                ConfigurationSection monthSection = yaml.getConfigurationSection(monthKey);
+                if (monthSection == null) continue;
+                
+                Map<UUID, MonthlyStats> monthStats = new HashMap<>();
+                
+                for (String uuidStr : monthSection.getKeys(false)) {
+                    try {
+                        UUID uuid = UUID.fromString(uuidStr);
+                        ConfigurationSection statsSection = monthSection.getConfigurationSection(uuidStr);
+                        if (statsSection == null) continue;
+                        
+                        MonthlyStats stats = new MonthlyStats(uuid);
+                        stats.setInspections(statsSection.getInt("inspections", 0));
+                        stats.setBans(statsSection.getInt("bans", 0));
+                        stats.setPoints(statsSection.getInt("points", 0));
+                        stats.setActivityScore(statsSection.getInt("activityScore", 0));
+                        
+                        // Load active days
+                        List<String> activeDays = statsSection.getStringList("activeDays");
+                        Set<LocalDate> days = activeDays.stream()
+                            .map(LocalDate::parse)
+                            .collect(Collectors.toSet());
+                        stats.setActiveDays(days);
+                        
+                        monthStats.put(uuid, stats);
+                    } catch (IllegalArgumentException e) {
+                        plugin.getLogger().warning("Nieprawidłowy UUID w statystykach miesięcznych: " + uuidStr);
+                    }
+                }
+                
+                monthlyStats.put(month, monthStats);
+            } catch (Exception e) {
+                plugin.getLogger().warning("Błąd podczas wczytywania statystyk dla miesiąca " + monthKey + ": " + e.getMessage());
+            }
+        }
+    }
+    
+    private void saveRankingData() {
+        try {
+            File dataFolder = new File(plugin.getDataFolder(), "data");
+            if (!dataFolder.exists()) {
+                dataFolder.mkdirs();
+            }
+            
+            File rankingFile = new File(dataFolder, "ranking.yml");
+            YamlConfiguration ranking = new YamlConfiguration();
+
+            for (Map.Entry<UUID, ModeratorStats> entry : moderatorStats.entrySet()) {
+                String basePath = "moderators." + entry.getKey().toString() + ".";
+                ModeratorStats stats = entry.getValue();
+                ranking.set(basePath + "name", stats.getModeratorName());
+                ranking.set(basePath + "totalReports", stats.getTotalReports());
+                ranking.set(basePath + "acceptedReports", stats.getAcceptedReports());
+                ranking.set(basePath + "rejectedReports", stats.getRejectedReports());
+                ranking.set(basePath + "totalPoints", stats.getTotalPoints());
+                ranking.set(basePath + "currentStreak", stats.getCurrentStreak());
+                ranking.set(basePath + "highestStreak", stats.getHighestStreak());
+                ranking.set(basePath + "lastActivity", stats.getLastActivity().toString());
+            }
+
+            ranking.save(rankingFile);
+        } catch (IOException e) {
+            plugin.getLogger().severe("Error saving ranking data: " + e.getMessage());
+        }
+    }
+    
+    private void saveMonthlyStats() {
+        try {
+            File dataFolder = new File(plugin.getDataFolder(), "data");
+            if (!dataFolder.exists()) {
+                dataFolder.mkdirs();
+            }
+            
+            File monthlyFile = new File(dataFolder, "monthly_stats.yml");
+            YamlConfiguration yaml = new YamlConfiguration();
+            
+            for (Map.Entry<YearMonth, Map<UUID, MonthlyStats>> entry : monthlyStats.entrySet()) {
+                String monthKey = entry.getKey().format(MONTH_FORMAT);
+                ConfigurationSection monthSection = yaml.createSection("months." + monthKey);
+                
+                for (Map.Entry<UUID, MonthlyStats> statsEntry : entry.getValue().entrySet()) {
+                    MonthlyStats stats = statsEntry.getValue();
+                    ConfigurationSection modSection = monthSection.createSection(statsEntry.getKey().toString());
+                    
+                    modSection.set("reports", stats.getReports());
+                    modSection.set("points", stats.getPoints());
+                    
+                    // Save active days as string list
+                    List<String> activeDays = stats.getActiveDays().stream()
+                        .map(LocalDate::toString)
+                        .collect(Collectors.toList());
+                    modSection.set("activeDays", activeDays);
+                }
+            }
+            
+            yaml.save(monthlyFile);
+        } catch (IOException e) {
+            plugin.getLogger().severe("Error saving monthly stats: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Inner class representing a moderator's statistics
+     */
+    public static class ModeratorStats implements Serializable {
+        private static final long serialVersionUID = 1L;
+        private final UUID moderatorId;
+        private String moderatorName;
+        private int totalReports;
+        private int acceptedReports;
+        private int rejectedReports;
+        private int totalPoints;
+        private int currentStreak;
+        private int highestStreak;
+        private LocalDate lastActivity;
+
+        public ModeratorStats(String moderatorName) {
+            this.moderatorId = UUID.randomUUID();
+            this.moderatorName = moderatorName;
+            this.totalReports = 0;
+            this.acceptedReports = 0;
+            this.rejectedReports = 0;
+            this.totalPoints = 0;
+            this.currentStreak = 0;
+            this.highestStreak = 0;
+            this.lastActivity = LocalDate.now();
+        }
+
+        // Getters
+        public UUID getModeratorId() { return moderatorId; }
+        public String getModeratorName() { return moderatorName; }
+        public int getTotalReports() { return totalReports; }
+        public int getAcceptedReports() { return acceptedReports; }
+        public int getRejectedReports() { return rejectedReports; }
+        public int getTotalPoints() { return totalPoints; }
+        public int getCurrentStreak() { return currentStreak; }
+        public int getHighestStreak() { return highestStreak; }
+        public LocalDate getLastActivity() { return lastActivity; }
+
+        // Setters
+        public void setModeratorName(String name) { this.moderatorName = name; }
+        public void setTotalReports(int count) { this.totalReports = count; }
+        public void setAcceptedReports(int count) { this.acceptedReports = count; }
+        public void setRejectedReports(int count) { this.rejectedReports = count; }
+        public void setTotalPoints(int points) { this.totalPoints = points; }
+        public void setCurrentStreak(int streak) { this.currentStreak = streak; }
+        public void setHighestStreak(int streak) { this.highestStreak = streak; }
+        public void setLastActivity(LocalDate date) { this.lastActivity = date; }
+
+        // Helper methods
+        public void incrementReports(boolean accepted) {
+            totalReports++;
+            if (accepted) {
+                acceptedReports++;
+                currentStreak++;
+                if (currentStreak > highestStreak) {
+                    highestStreak = currentStreak;
+                }
+            } else {
+                rejectedReports++;
+                currentStreak = 0;
+            }
+            lastActivity = LocalDate.now();
+        }
+
+        public void addPoints(int points) {
+            totalPoints += points;
+        }
+    }
+
+    /**
+     * Inner class representing monthly statistics for a moderator
+     */
+    public static class MonthlyStats {
+        private static final long serialVersionUID = 2L;
+        private final UUID moderatorId;
+        private final YearMonth month;
+        private int reports;
+        private int points;
+        private final Set<LocalDate> activeDays;
+
+        public MonthlyStats(UUID moderatorId, YearMonth month) {
+            this.moderatorId = moderatorId;
+            this.month = month;
+            this.reports = 0;
+            this.points = 0;
+            this.activeDays = new HashSet<>();
+        }
+
+        // Getters
+        public UUID getModeratorId() { return moderatorId; }
+        
+        public YearMonth getMonth() { return month; }
+
+        public int getReports() { return reports; }
+
+        public void setReports(int reports) { this.reports = reports; }
+
+        public int getPoints() { return points; }
+
+        public void setPoints(int points) { this.points = points; }
+
+        public Set<LocalDate> getActiveDays() { return new HashSet<>(activeDays); }
+        
+        public void addReport() { 
+            reports++; 
+            activeDays.add(LocalDate.now());
+        }
+        
+        public void addPoints(int amount) { 
+            points += amount; 
+            activeDays.add(LocalDate.now());
+        }
+        
+        public int getActiveDayCount() {
+            return activeDays.size();
+        }
+        
+        public boolean wasActiveOn(LocalDate date) {
+            return activeDays.contains(date);
+        }
+        
+        public int calculateActivityScore() {
+            // Simple scoring: points + (reports * 2) + (active days * 5)
+            return points + (reports * 2) + (getActiveDayCount() * 5);
+        }
+    }
+    }
+    private void scheduleMonthlyReset() {
+        // Run at midnight on the first day of each month
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH, 1);
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        
+        long delay = calendar.getTimeInMillis() - System.currentTimeMillis();
+        
+        Bukkit.getScheduler().runTaskLater(plugin, () -> {
+            // Save current month's data
+            saveMonthlyStats();
+            
+            // Clear current month's data
+            monthlyStats.remove(YearMonth.now().minusMonths(1));
+            
+            // Schedule next reset
+            scheduleMonthlyReset();
+        }, delay / 50); // Convert to ticks
+    }
+    
+    private void scheduleRewardDistribution() {
+        // Run at 1 AM on the first day of each month
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH, 1);
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 1);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        
+        long delay = calendar.getTimeInMillis() - System.currentTimeMillis();
+        
+        Bukkit.getScheduler().runTaskLater(plugin, () -> {
+            distributeMonthlyRewards();
+            scheduleRewardDistribution();
+        }, delay / 50); // Convert to ticks
+    }
+    
+    private void distributeMonthlyRewards() {
+        YearMonth lastMonth = YearMonth.now().minusMonths(1);
+        Map<UUID, MonthlyStats> lastMonthStats = monthlyStats.getOrDefault(lastMonth, new HashMap<>());
+        
+        if (lastMonthStats.isEmpty()) {
+            return;
+        }
+        
+        // Sort moderators by points
+        List<Map.Entry<UUID, MonthlyStats>> sorted = lastMonthStats.entrySet().stream()
+            .sorted((a, b) -> Integer.compare(b.getValue().getPoints(), a.getValue().getPoints()))
+            .collect(Collectors.toList());
+        
+        // Distribute rewards to top 3
+        for (int i = 0; i < Math.min(3, sorted.size()); i++) {
+            Map.Entry<UUID, MonthlyStats> entry = sorted.get(i);
+            Player player = Bukkit.getPlayer(entry.getKey());
+            if (player != null && player.hasPermission(REWARDS_PERMISSION)) {
+                String reward = getRewardForRank(i + 1);
+                // Here you would implement the actual reward distribution
+                player.sendMessage("§aGratulacje! Zajęłeś/aś " + (i + 1) + " miejsce w rankingu moderatorów!");
+                player.sendMessage("§aTwoja nagroda: " + reward);
+            }
+        }
+    }
+    
+    private String getRewardForRank(int rank) {
+        // Get rewards from config or use defaults
+        List<String> rewards = plugin.getConfig().getStringList("ranking.rewards.rank" + rank);
+        if (rewards == null || rewards.isEmpty()) {
+            // Default rewards if not configured
+            switch (rank) {
+                case 1: return "§6500 monet, §6Legenda serwera (30d), §6Skrzynka VIP";
+                case 2: return "§e300 monet, §eZłota skrzynka";
+                case 3: return "§f100 monet, §fSrebrna skrzynka";
+                default: return "Brak nagrody";
+            }
+        }
+        return String.join(", ", rewards);
+    }

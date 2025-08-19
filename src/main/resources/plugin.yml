@@ -1,0 +1,152 @@
+name: WiFiCraftSentinel
+version: 1.0.0
+main: com.wificraft.sentinel.WiFiCraftSentinel
+api-version: '1.20'
+api-version: '1.20.4'
+authors: [Gordon]
+description: |
+  Advanced moderation plugin for PvP servers.
+  Integrates with AdvancedBan and Vulcan/Grim for comprehensive anti-cheat protection.
+  Provides tools for player inspection, moderation, and server optimization.
+website: https://wificraft.pl
+maintainers: [Gordon]
+
+
+
+# Dependencies
+softdepend: [Vault, PlaceholderAPI, AdvancedBan, GrimAC]
+depend: [Vulcan]
+
+# Load after anti-cheat plugins
+load: POSTWORLD
+
+# Plugin commands and permissions
+prefix: sentinel
+
+commands:
+  sprawdz:
+    description: "Sprawdza gracza, pokazuje statystyki moderatora lub zarządza strefą sprawdzania"
+    usage: |
+      /<command> - Otwiera panel moderatora
+      /<command> <gracz> - Sprawdza gracza
+      /<command> strefa ustaw - Ustawia strefę sprawdzania
+      /<command> strefa usun - Wyłącza strefę sprawdzania
+      /<command> cheater - Pokazuje listę podejrzanych graczy (zintegrowane z AdvancedBan i Vulcan/Grim)
+    permission: sentinel.inspect
+    aliases: ["sprawdzanie", "check"]
+  scan:
+    description: "Skanuje klienta gracza na podatności i modyfikacje"
+    usage: "/<command> <gracz>"
+    permission: sentinel.security.scan
+    aliases: ["scans", "checkclient"]
+  analyze:
+    description: "Analizuje zachowanie gracza"
+    usage: "/<command> <gracz>"
+    permission: sentinel.behavior.analyze
+    aliases: ["behavior", "analyzeplayer"]
+  hardware:
+    description: "Sprawdza sprzęt gracza"
+    usage: "/<command> <gracz>"
+    permission: sentinel.hardware.check
+    aliases: ["checkhardware", "hwcheck"]
+  location:
+    description: "Sprawdza lokalizację gracza"
+    usage: "/<command> <gracz>"
+    permission: sentinel.location.check
+    aliases: ["checklocation", "loccheck"]
+  cloud:
+    description: "Sprawdza dostawcę chmury gracza"
+    usage: "/<command> <gracz>"
+    permission: sentinel.cloud.check
+    aliases: ["checkcloud", "cloudcheck"]
+  dc:
+    description: "Sprawdza centrum danych gracza"
+    usage: "/<command> <gracz>"
+    permission: sentinel.dc.check
+    aliases: ["checkdc", "dccounter"]
+  gui:
+    description: "Otwiera interfejs graficzny"
+    usage: "/<command> [typ]"
+    permission: sentinel.gui.open
+    aliases: ["menu", "interface"]
+  violation:
+    description: "Sprawdza naruszenia z anti-cheatami"
+    usage: "/<command> <gracz>"
+    permission: sentinel.violation.check
+    aliases: ["checkviolation", "violationcheck"]
+  linkdiscord:
+    description: "Powiązuje konto Minecraft z Discord"
+    usage: "/<command> <discord_id>"
+    permission: sentinel.link
+  rankmod:
+    description: "Pokazuje ranking moderatorów"
+    usage: "/<command>"
+    permission: sentinel.rank
+  optimize:
+    description: "Wymusza optymalizację serwera"
+    usage: "/<command>"
+    permission: sentinel.optimize
+  status:
+    description: "Pokazuje status pluginu"
+    usage: "/<command>"
+    permission: sentinel.use
+
+permissions:
+  sentinel.*:
+    description: "Uprawnienia do wszystkich funkcji WiFiCraft Sentinel"
+    children:
+      sentinel.inspect: true
+      sentinel.inspect.zone: true
+      sentinel.link: true
+      sentinel.rank: true
+      sentinel.optimize: true
+      sentinel.sprawdz.strefa: true
+      sentinel.security.scan: true
+      sentinel.behavior.analyze: true
+      sentinel.hardware.check: true
+      sentinel.location.check: true
+      sentinel.cloud.check: true
+      sentinel.dc.check: true
+      sentinel.gui.open: true
+      sentinel.violation.check: true
+  
+  sentinel.inspect.zone:
+    description: "Pozwala zarządzać strefą sprawdzania"
+    default: op
+    
+  sentinel.sprawdz.strefa:
+    description: "Pozwala ustawiać i usuwać strefę sprawdzania"
+    default: op
+    children:
+      sentinel.inspect.zone: true
+      sentinel.use: true
+  sentinel.inspect:
+    description: "Uprawnienia do inspekcji graczy"
+    default: op
+  sentinel.link:
+    description: "Uprawnienia do powiązania konta Discord"
+    default: true
+  sentinel.rank:
+    description: "Uprawnienia do rankingu moderatorów"
+    default: op
+  sentinel.optimize:
+    description: "Uprawnienia do optymalizacji serwera"
+    default: op
+  sentinel.use:
+    description: "Podstawowe uprawnienia do użycia pluginu"
+    default: true
+  sentinel.ranking.rewards:
+    description: "Otrzymywanie nagród z rankingu moderatorów"
+    default: op
+  sentinel.reports:
+    description: "Dostęp do systemu raportów"
+    default: op
+  sentinel.reports.create:
+    description: "Tworzenie raportów"
+    default: true
+  sentinel.reports.view:
+    description: "Przeglądanie raportów"
+    default: op
+  sentinel.reports.manage:
+    description: "Zarządzanie raportami"
+    default: op

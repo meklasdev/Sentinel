@@ -1,0 +1,452 @@
+# WiFiCraft Sentinel Configuration
+
+# Security Module Settings
+security:
+  enabled: true
+  whitelist-file: "whitelist_clients.yml"
+  alert-webhook-url: ""
+  block-unknown-clients: true
+  alert-on-scan: true
+  # BoxPvP-specific settings
+  pvp-mode: true
+  arena-mode: true
+  anti-cheat-integration:
+    enabled: true
+    vulcan-enabled: true
+    grim-enabled: true
+    advancedban-enabled: true
+    ban-on-cheat: true
+    auto-report: true
+    severity-multiplier: 2.0  # Higher multiplier for BoxPvP
+    ban-duration: "1d"      # Default ban duration for cheats
+    
+  # Banned Modifications and Cheats
+  banned-items:
+    - "elytra"  # ElytraSwapper
+    - "totem_of_undying"  # AutoTotem
+    - "enchanted_book"  # InventoryMove
+    - "ender_pearl"  # Teleportation hacks
+    
+  banned-patterns:
+    # Modifications
+    - "elytraSwapper"
+    - "autoTotem"
+    - "inventoryMove"
+    - "accurateBlockPlacement"
+    - "swingThrough"
+    
+    # Cheats/Hacks
+    - "killAura"
+    - "aimAssist"
+    - "reachHack"
+    - "noSlowDown"
+    - "velocityHack"
+    - "antiKB"
+    - "fastPlace"
+    - "fastBreak"
+    - "jesusHack"
+    - "flyHack"
+    - "spiderHack"
+    - "scaffoldHack"
+    - "xray"
+    - "autoSoup"
+    - "autoArmor"
+    - "noFall"
+    - "bhop"
+    - "timerHack"
+    - "phaseHack"
+    - "vClip"
+    - "hClip"
+    - "blinkHack"
+    - "fastLadder"
+    - "chestStealer"
+    - "nukerHack"
+    - "derpHack"
+    - "criticalsHack"
+    
+    # Macros/AutoClickers
+    - "autoClicker"
+    - "doubleClickMacro"
+    - "fastClickMacro"
+    - "holdClickMacro"
+    
+  # BoxPvP-specific patterns
+  suspicious-patterns:
+    - "speedhack"
+    - "flyhack"
+    - "wallhack"
+    - "aimbot"
+    - "triggerbot"
+    - "esp"
+    - "nuker"
+    - "autoclicker"
+    - "reach"
+    - "criticals"
+    - "fastbreak"
+    - "fastplace"
+    - "wallclimb"
+    - "speed"
+    - "fly"
+    - "killaura"
+    - "killaura:aimbot"
+    - "killaura:autoclicker"
+    - "killaura:criticals"
+    - "killaura:reach"
+    - "killaura:triggerbot"
+    - "killaura:esp"
+    - "killaura:nuker"
+    - "killaura:autoclicker"
+    - "killaura:fastbreak"
+    - "killaura:fastplace"
+    - "killaura:wallclimb"
+    - "killaura:speed"
+    - "killaura:fly"
+    
+  # Arena-specific settings
+  arena:
+    enabled: true
+    max-players: 20
+    min-players: 2
+    match-duration: "15m"
+    kit-system: true
+    
+  # Economy settings
+  economy:
+    enabled: true
+    points-per-kill: 50
+    points-per-death: -20
+    kit-cost-multiplier: 1.5
+    
+  # Ranking settings
+  ranking:
+    enabled: true
+    top-players: 10
+    update-interval: "1h"
+    display-top: true
+
+# Performance Module Settings
+performance:
+  enabled: true
+  check-interval-ticks: 100
+  tps-threshold: 18
+  ram-threshold-mb: 500
+  alert-webhook-url: ""
+  optimize-on-low-tps: true
+
+# Discord Module Settings
+discord:
+  enabled: true
+  bot-token: ""  # Token bota Discord
+  webhook-config:
+    enabled: true  # Włączenie webhook'ów
+    default-webhook: ""  # Domyślny webhook Discord dla wszystkich alertów
+    webhooks:
+      # Możliwość zdefiniowania wielu webhook'ów dla różnych typów alertów
+      security:
+        webhook-url: ""  # Webhook dla alertów bezpieczeństwa
+        severity-level: 2  # Minimalny poziom ważności dla tego webhook'a (1-4)
+        enabled: true
+        color: "RED"  # Kolor wiadomości (RED, ORANGE, YELLOW, GREEN)
+      performance:
+        webhook-url: ""  # Webhook dla alertów wydajności
+        severity-level: 1  # Minimalny poziom ważności dla tego webhook'a
+        enabled: true
+        color: "YELLOW"
+      moderation:
+        webhook-url: ""  # Webhook dla akcji moderacyjnych
+        severity-level: 2
+        enabled: true
+        color: "BLUE"
+      suspicious:
+        webhook-url: ""  # Webhook dla podejrzanych działań
+        severity-level: 3
+        enabled: true
+        color: "ORANGE"
+  help-channel-id: ""  # ID kanału pomocy
+  guild-id: ""  # ID serwera Discord
+  slash-commands-enabled: true  # Włączenie slash command'ów
+  prefix: "!"  # Prefix dla slash command'ów
+  cooldown: 5  # Cooldown w sekundach
+  min-permission: "operator"  # Minimalne uprawnienia do komend
+  role-sync:
+    enabled: true  # Włączenie synchronizacji ról
+    player-mappings:
+      # Przykład:
+      # "player1": "123456789012345678"
+    role-mappings:
+      # Przykład:
+      # "Staff": "staff"
+      # "VIP": "vip"
+  debug: false
+  slash-commands:
+    enabled: true  # Włączenie slash command'ów
+    prefix: "/"  # Prefix dla slash command'ów
+    cooldown: 5  # Cooldown w sekundach
+    permissions:
+      player: "moderator"  # Uprawnienia dla komendy player
+      alert: "admin"  # Uprawnienia dla komendy alert
+      report: "moderator"  # Uprawnienia dla komendy report
+
+# Security Settings
+security:
+  behavior-tracking:
+    enabled: true
+    history-duration: "1h"
+    alert-threshold: 3
+  alerts:
+    enabled: true
+    discord-webhook: ""
+    severity-threshold: 2
+  ip-analysis:
+    enabled: true
+    analysis-interval: "1m"
+    max-ip-changes: 3
+    min-connection-time: "5m"
+    suspicious-ip-changes: true
+    suspicious-shared-ips: true
+    vpn-check: true
+    proxy-check: true
+    ip-geolocation: true
+    ip-range-check: true
+  geolocation:
+    enabled: true
+    api-key: "YOUR_API_KEY"
+    cache-duration: "60m"
+    suspicious-countries:
+      - "RU"
+      - "CN"
+      - "IR"
+      - "KP"
+      - "VN"
+      - "TH"
+      - "ID"
+    suspicious-timezones:
+      - "Asia/Shanghai"
+      - "Asia/Ho_Chi_Minh"
+      - "Asia/Bangkok"
+  cloud-provider:
+    enabled: true
+    cache-duration: "60m"
+    suspicious-providers:
+      - "AWS"
+      - "Google Cloud"
+      - "Azure"
+      - "DigitalOcean"
+      - "Heroku"
+      - "OVH"
+      - "Linode"
+      - "Oracle Cloud"
+      - "IBM Cloud"
+      - "Rackspace"
+  data-center:
+    enabled: true
+    cache-duration: "60m"
+    suspicious-data-centers:
+      - "Equinix"
+      - "Cyxtera"
+      - "Digital Realty"
+      - "ColoCrossing"
+      - "CyrusOne"
+      - "CoreSite"
+      - "Interxion"
+      - "Telehouse"
+      - "Telecity"
+      - "Iron Mountain"
+  event-system:
+    enabled: true
+    debug: false
+    event-cache-duration: "1h"
+    max-event-queue-size: 1000
+    event-priorities:
+      PlayerBehaviorEvent: HIGH
+      PlayerLoginEvent: NORMAL
+      PlayerChatEvent: MEDIUM
+      PlayerMoveEvent: LOW
+    event-filters:
+      PlayerBehaviorEvent:
+        min-score: 30
+        max-score: 100
+        ignore-types:
+          - CUSTOM
+      PlayerChatEvent:
+        min-length: 3
+        max-length: 100
+        ignore-words:
+          - "hello"
+          - "hi"
+          - "thanks"
+  gui:
+    enabled: true
+    debug: false
+    gui-size: 54
+    background-item: "GRAY_STAINED_GLASS_PANE"
+    gui-configs:
+      player_info:
+        title: "§6Informacje o graczu"
+        items:
+          - slot: 10
+            material: PLAYER_HEAD
+            name: "§aGracz"
+            lore:
+              - "§7Kliknij, aby zobaczyć informacje o graczu"
+          - slot: 12
+            material: COMPASS
+            name: "§aLokalizacja"
+            lore:
+              - "§7Kliknij, aby zobaczyć lokalizację gracza"
+          - slot: 14
+            material: COMPUTER
+            name: "§aSprzęt"
+            lore:
+              - "§7Kliknij, aby zobaczyć sprzęt gracza"
+          - slot: 20
+            material: CLOUD
+            name: "§aChmura"
+            lore:
+              - "§7Kliknij, aby zobaczyć dostawcę chmury"
+          - slot: 22
+            material: SERVER
+            name: "§aCentrum danych"
+            lore:
+              - "§7Kliknij, aby zobaczyć centrum danych"
+      security_dashboard:
+        title: "§cPanel bezpieczeństwa"
+        items:
+          - slot: 10
+            material: SHIELD
+            name: "§aOstrzeżenia"
+            lore:
+              - "§7Kliknij, aby zobaczyć ostrzeżenia"
+          - slot: 12
+            material: BELL
+            name: "§aAlerty"
+            lore:
+              - "§7Kliknij, aby zobaczyć alerty"
+          - slot: 14
+            material: COMPASS
+            name: "§aLokalizacje"
+            lore:
+              - "§7Kliknij, aby zobaczyć lokalizacje"
+          - slot: 20
+            material: COMPASS
+            name: "§aAnaliza"
+            lore:
+              - "§7Kliknij, aby zobaczyć analizę zachowania"
+  anti-cheat:
+    enabled: true
+    debug: false
+    systems:
+      vulan:
+        enabled: true
+        version: "1.0.0"
+        author: "Vulan"
+        banned-cheats:
+          - "VULAN_SPEED"
+          - "VULAN_REACH"
+          - "VULAN_FLY"
+          - "VULAN_WALLCLIMB"
+        suspicious-cheats:
+          - "VULAN_SPEED"
+          - "VULAN_REACH"
+          - "VULAN_FLY"
+          - "VULAN_WALLCLIMB"
+      grim:
+        enabled: true
+        version: "1.0.0"
+        author: "Grim"
+        banned-cheats:
+          - "GRIM_SPEED"
+          - "GRIM_REACH"
+          - "GRIM_FLY"
+          - "GRIM_WALLCLIMB"
+        suspicious-cheats:
+          - "GRIM_SPEED"
+          - "GRIM_REACH"
+          - "GRIM_FLY"
+          - "GRIM_WALLCLIMB"
+    violation-levels:
+      warning: 3
+      ban: 5
+    violation-timeout: "30m"
+    violation-decay: "5m"
+    vpn-check: true
+    proxy-check: true
+    cloud-provider-ranges:
+      AWS:
+        - "52.0.0.0/8"
+        - "54.0.0.0/8"
+        - "34.0.0.0/8"
+      OVH:
+        - "149.202.0.0/16"
+        - "185.10.0.0/16"
+    suspicious-patterns:
+      proxy: "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+      tunnel: "10\.\d{1,3}\.\d{1,3}\.\d{1,3}"
+      vpn: "192\.168\.\d{1,3}\.\d{1,3}"
+  hardware-fingerprinting:
+    enabled: true
+    cache-duration: "24h"
+
+# Ustawienia Modułu Inspekcji
+inspection:
+  enabled: true # Włączenie/wyłączenie modułu
+  inspections-file: "inspections.yml" # Plik zapisu inspekcji
+  allow-comments: true # Zezwalaj na komentarze do inspekcji
+  record-history: true # Zapisuj historię inspekcji
+  zones: # Lista stref inspekcji
+    - name: "MainZone" # Nazwa strefy
+      enabled: true # Włączenie/wyłączenie strefy
+      world: "" # Świat (puste dla wszystkich światów)
+      priority: 1 # Priorytet inspekcji (1-10)
+      scan-interval: "30s" # Interwał skanowania
+      max-distance: 100 # Maksymalna odległość skanowania
+      pos1:
+        x: 0
+        y: 0
+        z: 0
+      pos2:
+        x: 0
+        y: 0
+        z: 0
+      inspection-types:
+        - type: "blocks" # Typ inspekcji
+          enabled: true
+          threshold: 50 # Próg wyzwolenia alertu
+          suspicious-blocks:
+            - "ender_chest" # Lista podejrzanych bloków
+            - "chest"
+            - "shulker_box"
+        - type: "players" # Typ inspekcji graczy
+          enabled: true
+          threshold: 3 # Próg podejrzanych działań
+          suspicious-actions:
+            - "fast-break" # Szybkie niszczenie bloków
+            - "fast-place" # Szybkie umieszczanie bloków
+            - "wall-climb" # Wspinanie po ścianach
+      alert-settings:
+        enabled: true # Włączenie powiadomień
+        webhook-type: "security" # Typ webhooka dla alertów
+        severity-level: 2 # Poziom ważności alertu
+        notify-players: true # Powiadamiaj graczy o inspekcji
+
+# Live Monitor Settings
+livemonitor:
+  enabled: true
+  refresh-seconds: 5
+  show-suspected: true
+  gui-title: "WiFiCraft Sentinel - Live Monitor"
+
+# Moderator Ranking Settings
+ranking:
+  enabled: true
+  stats-file: "rankmod_stats.yml"
+  public-ranking: true
+
+# Logging Settings
+logging:
+  level: INFO
+  log-file: "sentinel.log"
+  retention-days: 7 # Number of days to keep log files
+
+# Default Permissions
+default-permission: false

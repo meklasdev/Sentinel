@@ -1,0 +1,9 @@
+# Ban History Configuration
+# Each entry contains:
+# - uuid: Player UUID
+# - reason: Ban reason
+# - moderator: Moderator UUID
+# - timestamp: Ban timestamp (Unix timestamp)
+# - duration: Duration in seconds (0 for permanent)
+
+bans: []

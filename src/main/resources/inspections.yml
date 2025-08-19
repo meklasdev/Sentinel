@@ -1,0 +1,18 @@
+# WiFiCraft Sentinel - Inspection History
+# Format:
+# players:
+#   <uuid>:
+#     inspections: <number>
+#     bans: <number>
+
+# Example entries:
+# players:
+#   "123e4567-e89b-12d3-a456-426614174000":
+#     inspections: 15
+#     bans: 3
+#   "234e5678-e9ab-23d4-b567-535725485111":
+#     inspections: 22
+#     bans: 5
+
+players:
+  # Add your player inspection history here

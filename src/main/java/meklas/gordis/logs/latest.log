@@ -1,0 +1,5 @@
+[22:30:50] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.7+6; Red Hat, Inc. (Red_Hat-21.0.7.0.6-1)) on Linux 6.11.11-300.fc41.x86_64 (amd64)
+[22:30:50] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.4-232-ver/1.21.4@12d8fe0 (2025-06-09T10:15:42Z) for Minecraft 1.21.4
+[22:30:50] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[22:30:50] [ServerMain/INFO]: [PluginInitializerManager] Initialized 0 plugins
+[22:30:57] [ServerMain/INFO]: You need to agree to the EULA in order to run the server. Go to eula.txt for more info.

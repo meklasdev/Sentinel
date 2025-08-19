@@ -1,0 +1,213 @@
+security:
+  behavior-tracking:
+    enabled: true
+    history-duration: "1h"
+    alert-threshold: 3
+  alerts:
+    enabled: true
+    discord-webhook: "YOUR_WEBHOOK_URL"
+    severity-threshold: 2
+  ip-analysis:
+    enabled: true
+    analysis-interval: "1m"
+    max-ip-changes: 3
+    min-connection-time: "5m"
+    suspicious-ip-changes: true
+    suspicious-shared-ips: true
+    vpn-check: true
+    proxy-check: true
+    ip-geolocation: true
+    ip-range-check: true
+  geolocation:
+    enabled: true
+    api-key: "YOUR_API_KEY"
+    cache-duration: "60m"
+    suspicious-countries:
+      - "RU"
+      - "CN"
+      - "IR"
+      - "KP"
+      - "VN"
+      - "TH"
+      - "ID"
+    suspicious-timezones:
+      - "Asia/Shanghai"
+      - "Asia/Ho_Chi_Minh"
+      - "Asia/Bangkok"
+  cloud-provider:
+    enabled: true
+    cache-duration: "60m"
+    suspicious-providers:
+      - "AWS"
+      - "Google Cloud"
+      - "Azure"
+      - "DigitalOcean"
+      - "Heroku"
+      - "OVH"
+      - "Linode"
+      - "Oracle Cloud"
+      - "IBM Cloud"
+      - "Rackspace"
+  data-center:
+    enabled: true
+    cache-duration: "60m"
+    suspicious-data-centers:
+      - "Equinix"
+      - "Cyxtera"
+      - "Digital Realty"
+      - "ColoCrossing"
+      - "CyrusOne"
+      - "CoreSite"
+      - "Interxion"
+      - "Telehouse"
+      - "Telecity"
+      - "Iron Mountain"
+  event-system:
+    enabled: true
+    debug: false
+    event-cache-duration: "1h"
+    max-event-queue-size: 1000
+    event-priorities:
+      PlayerBehaviorEvent: HIGH
+      PlayerLoginEvent: NORMAL
+      PlayerChatEvent: MEDIUM
+      PlayerMoveEvent: LOW
+    event-filters:
+      PlayerBehaviorEvent:
+        min-score: 30
+        max-score: 100
+        ignore-types:
+          - CUSTOM
+      PlayerChatEvent:
+        min-length: 3
+        max-length: 100
+        ignore-words:
+          - "hello"
+          - "hi"
+          - "thanks"
+  anti-cheat:
+    enabled: true
+    debug: false
+    systems:
+      vulan:
+        enabled: true
+        version: "1.0.0"
+        author: "Vulan"
+        banned-cheats:
+          - "VULAN_SPEED"
+          - "VULAN_REACH"
+          - "VULAN_FLY"
+          - "VULAN_WALLCLIMB"
+        suspicious-cheats:
+          - "VULAN_SPEED"
+          - "VULAN_REACH"
+          - "VULAN_FLY"
+          - "VULAN_WALLCLIMB"
+      grim:
+        enabled: true
+        version: "1.0.0"
+        author: "Grim"
+        banned-cheats:
+          - "GRIM_SPEED"
+          - "GRIM_REACH"
+          - "GRIM_FLY"
+          - "GRIM_WALLCLIMB"
+        suspicious-cheats:
+          - "GRIM_SPEED"
+          - "GRIM_REACH"
+          - "GRIM_FLY"
+          - "GRIM_WALLCLIMB"
+    violation-levels:
+      warning: 3
+      ban: 5
+    violation-timeout: "30m"
+    violation-decay: "5m"
+    vpn-check: true
+    proxy-check: true
+    cloud-provider-ranges:
+      - "10.0.0.0/8"
+      - "172.16.0.0/12"
+      - "192.168.0.0/16"
+      - "100.64.0.0/10"
+      - "169.254.0.0/16"
+      - "127.0.0.0/8"
+
+# GUI settings
+gui:
+  enabled: true
+  debug: false
+  gui-size: 54
+  background-item: "GRAY_STAINED_GLASS_PANE"
+  gui-configs:
+    player_info:
+      title: "§6Informacje o graczu"
+      items:
+        - slot: 10
+          material: PLAYER_HEAD
+          name: "§aGracz"
+          lore:
+            - "§7Kliknij, aby zobaczyć informacje o graczu"
+        - slot: 12
+          material: COMPASS
+          name: "§aLokalizacja"
+          lore:
+            - "§7Kliknij, aby zobaczyć lokalizację gracza"
+        - slot: 14
+          material: COMPUTER
+          name: "§aSprzęt"
+          lore:
+            - "§7Kliknij, aby zobaczyć sprzęt gracza"
+        - slot: 20
+          material: CLOUD
+          name: "§aChmura"
+          lore:
+            - "§7Kliknij, aby zobaczyć dostawcę chmury"
+        - slot: 22
+          material: SERVER
+          name: "§aCentrum danych"
+          lore:
+            - "§7Kliknij, aby zobaczyć centrum danych"
+    security_dashboard:
+      title: "§cPanel bezpieczeństwa"
+      items:
+        - slot: 10
+          material: SHIELD
+          name: "§aOstrzeżenia"
+          lore:
+            - "§7Kliknij, aby zobaczyć ostrzeżenia"
+        - slot: 12
+          material: BELL
+          name: "§aAlerty"
+          lore:
+            - "§7Kliknij, aby zobaczyć alerty"
+        - slot: 14
+          material: COMPASS
+          name: "§aLokalizacje"
+          lore:
+            - "§7Kliknij, aby zobaczyć lokalizacje"
+        - slot: 20
+          material: COMPASS
+          name: "§aAnaliza"
+          lore:
+            - "§7Kliknij, aby zobaczyć analizę zachowania"
+
+# Discord settings
+discord:
+  enabled: true
+  webhook-url: "YOUR_WEBHOOK_URL"
+  log-level: "INFO"
+  alert-colors:
+    LOW: "#4CAF50"
+    MEDIUM: "#FFC107"
+    HIGH: "#FF5722"
+    CRITICAL: "#F44336"
+  alert-format: "§7[§cWiFiCraft Sentinel§7] §a{player} §7- §c{message}"
+
+# Logging settings
+logging:
+  enabled: true
+  log-level: "INFO"
+  log-format: "[WiFiCraft Sentinel] {message}"
+  log-file: "sentinel.log"
+  max-log-size: "10MB"
+  max-log-count: 5
